@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Application.Controllers
 {
 
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -19,7 +20,7 @@ namespace API.Application.Controllers
         }
 
 
-        //public async Task<ActionResult> GetAll([FromServices] IUserService service)
+        [HttpGet]
         public async Task<ActionResult> GetAll()
         {
             if (!ModelState.IsValid)
