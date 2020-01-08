@@ -13,4 +13,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\API.Domain\Domain.csproj" />
+    <ProjectReference Include="..\API.Service\Service.csproj" />
+    <ProjectReference Include="..\API.CrossCutting\CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>
