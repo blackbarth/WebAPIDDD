@@ -113,3 +113,4 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 3.1.0
 
 instalar json
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 3.1.0
+
