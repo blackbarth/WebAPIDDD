@@ -46,26 +46,45 @@ dotnet sln add API.CrossCutting
 dotnet new classlib -n Data -f netcoreapp2.1 -o API.Data
 ```
 
-
+```
 dotnet sln add API.Data
+```
 
+## Criar Service
 
+```
 dotnet new classlib -n Service -f netcoreapp2.1 -o API.Service
+```
+
+```
 dotnet sln add API.Service
+```
 
+## instalar entityframeworkcore / Na camada Data
 
-instalar entityframeworkcore / Na camada Data
+```
 dotnet add package Microsoft.EntityFrameworkCore.Tools --version 2.1.14
+```
+
+```
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 2.1.14
+```
 
+```
 dotnet add package Microsoft.EntityFrameworkCore --version 2.1.14
+```
 
-driver mysql
+## Driver mysql
+
+```
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.1.4
+```
 
+## Criar referencia de um projeto no outro
 
-criar referencia de um projeto no outro
+```
  dotnet add .\API.Data\ reference .\API.Domain\
+```
 
 
  dotnet tool install --global dotnet-ef --version 3.1.0
