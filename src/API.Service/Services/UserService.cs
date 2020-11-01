@@ -19,10 +19,7 @@ namespace API.Service.Services
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<bool> Delete(Guid id)
-        {
-            return await _repository.DeleteAsync(id);
-        }
+
 
         public async Task<UserDTO> Get(Guid id)
         {
@@ -51,6 +48,10 @@ namespace API.Service.Services
             var entity = _mapper.Map<UserEntity>(model);
             var result = await _repository.UpdateAsync(entity);
             return _mapper.Map<UserDTOUpdateResult>(result);
+        }
+        public async Task<bool> Delete(Guid id)
+        {
+            return await _repository.DeleteAsync(id);
         }
     }
 }
