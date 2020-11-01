@@ -1,25 +1,52 @@
 # WebAPIDDD
+
 ```
 dotnet new sln -n nomeprojeto
 ```
 
+```
 dotnet new webapi -n Application -f netcoreapp2.1 -o API.Application --no-https
-dotnet sln add API.Application
+```
 
+```
+dotnet sln add API.Application
+```
+
+```
 dotnet new webapi -n Application -f netcoreapp2.1 -o API.Application --no-https
-dotnet sln add API.Application
+```
 
-criar domain
+```
+dotnet sln add API.Application
+```
+
+## Criar domain
+
+```
 dotnet new classlib -n Domain -f netcoreapp2.1 -o API.Domain
+```
 
+```
 dotnet sln add API.Domain
+```
 
+## Criar CrossCutting
 
+```
 dotnet new classlib -n CrossCutting -f netcoreapp2.1 -o API.CrossCutting
+```
+
+```
 dotnet sln add API.CrossCutting
+```
 
+## Criar Data
 
+```
 dotnet new classlib -n Data -f netcoreapp2.1 -o API.Data
+```
+
+
 dotnet sln add API.Data
 
 
