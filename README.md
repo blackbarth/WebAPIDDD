@@ -1,6 +1,11 @@
 # WebAPIDDD
-WebAPI-DDD
+```
 dotnet new sln -n nomeprojeto
+```
+
+dotnet new webapi -n Application -f netcoreapp2.1 -o API.Application --no-https
+dotnet sln add API.Application
+
 dotnet new webapi -n Application -f netcoreapp2.1 -o API.Application --no-https
 dotnet sln add API.Application
 
@@ -34,27 +39,27 @@ dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.1.4
 
 criar referencia de um projeto no outro
  dotnet add .\API.Data\ reference .\API.Domain\
- 
- 
+
+
  dotnet tool install --global dotnet-ef --version 3.1.0
- 
+
  exibe a versao do framework
  dotnet ef --version
  dotnet ef migrations
- 
+
 dotnet ef migrations  add Fist_migration
 dotnet ef database update
 
 
  dotnet add .\API.Service\ reference .\API.Domain\
  dotnet add .\API.Service\ reference .\API.Data\  
+
  
- 
- 
+
  dotnet add .\API.Application\ reference .\API.Domain\
  dotnet add .\API.Application\ reference .\API.Service\
  dotnet add .\API.Application\ reference .\API.CrossCutting\
- 
+
  dotnet add .\API.CrossCutting\ reference .\API.Domain\
   dotnet add .\API.CrossCutting\ reference .\API.Service\
    dotnet add .\API.CrossCutting\ reference .\API.Data\
@@ -89,13 +94,12 @@ implementando jwt
 nuget Identity.Model.Tokens.Jwt
 cd domain
 dotnet add package System.IdentityModel.Tokens.Jwt --version 5.6.0
- 
+
 
 Instalar automapper 
 croscutting
 service
 dotnet add package AutoMapper --version 9.0.0
-
 
 outra assinatura
         //public async Task<ActionResult> GetAll([FromServices] IUserService service)
